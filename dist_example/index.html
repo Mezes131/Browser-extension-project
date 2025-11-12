@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carbon Footprint</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; padding: 12px; width:320px; }
+    .form-data > div { margin-bottom: 8px; }
+    input[type="text"], input[type="password"] { width: 100%; padding: 6px 8px; box-sizing: border-box; }
+    .search-btn, .clear-btn, .toggle-data-type-visibility { padding: 6px 10px; cursor: pointer; }
+    .loading { display: none; margin: 8px 0; color: #333; }
+    .errors { color: red; margin: 6px 0; min-height: 18px; }
+    .result-container { display: block; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <form action="#" class="form-data" autocomplete="on">
+      <div>
+          <h2>
+              New ? Add your information here.
+          </h2>
+      </div>
+      <div>
+          <label for="region">Region Name</label>
+          <input aria-label="region" type="text" id="region" required class="region-name" placeholder="e.g. US-NEISO or CM"/>
+      </div>
+      <div>
+            <label for="data_type">Data Type</label>
+            <select aria-label="data_type" name="data-type" id="data_type" required class="data_type">
+                <option value="carbon-intensity">Carbon Intensity</option>
+                <option value="electricity-mix">Electricity Mix</option>
+            </select>
+      </div>
+      <button type="submit" class="search-btn">Submit</button>
+  </form>
+
+  <div class="result">
+      <div class="loading">Loading...</div>
+      <div class="errors"></div>
+      <div class="data"></div>
+      <div class="result-container">
+          <p><strong>Region:</strong><span class="my-region"></span></p>
+          <p><strong>Carbon Usage:</strong><span class="carbon-usage"></span></p>
+          <p><strong>Fossil Fuel Percentage:</strong><span class="fossil-fuel"></span></p>
+      </div>
+      <button type="reset" class="clear-btn">Change Region</button>
+  </div>
+
+  <script src="src/index.js"></script>
+</body>
+</html>

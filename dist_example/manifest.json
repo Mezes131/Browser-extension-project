@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Carbon Footprint (ElectricityMaps)",
+  "version": "1.0.0",
+  "description": "Shows carbon intensity and fossil fuel percentage for a selected region using ElectricityMaps API.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Carbon Footprint"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://api.electricitymaps.com/*"
+  ]
+}
