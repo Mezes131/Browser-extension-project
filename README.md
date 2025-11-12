@@ -94,4 +94,6 @@ You should NOT commit your API key. Add `.env` and any local secrets to `.gitign
 
 ---
 
-If you'd like, I can add a small form control in the popup to save the API key to storage and wire the UI to read the stored key automatically — tell me and I'll implement it.
+## Credits
+
+Created by **Mezes**. Please open an issue or a PR if you have suggestions.
